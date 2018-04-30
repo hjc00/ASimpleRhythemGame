@@ -83,6 +83,7 @@ public class String : MonoBehaviour
             //miss
             ChangeCurrentNote();
             Destroy(other.gameObject);
+            UIManager.Instance.UpdateTips("miss - 10!");
             ScoreManager.Instance.MinusScore(10);
         }
     }

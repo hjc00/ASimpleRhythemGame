@@ -26,14 +26,12 @@ public class UIManager : MonoBehaviour
     public void UpdateTips(string content)
     {
         tips.text = content;
-        tips.transform.DOScale(new Vector3(2, 2, 2),0.5f);
         StartCoroutine(HideTips());
     }
 
     IEnumerator HideTips()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.2f);
         tips.text = "";
-        tips.transform.localScale = new Vector3(0, 0, 0);
     }
 }
